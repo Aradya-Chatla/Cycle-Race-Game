@@ -123,7 +123,8 @@ function draw() {
 }else if (gameState === END) {
     gameOver.visible = true;
     //Add code to show restart game instrution in text here
-  
+  textSize(20);
+  text("Press up Arrow to Restart the Game!", 475,220);
   
     path.velocityX = 0;
     mainCyclist.velocityY = 0;
@@ -138,9 +139,13 @@ function draw() {
     redCG.setVelocityXEach(0);
     redCG.setLifetimeEach(-1);
 
-    //write condition for calling reset( )
+    //write condition for calling reset()
+  if (keyDown(UP_ARROW)) {
+    reset();
+  }
 }
 }
+
 
 function pinkCyclists(){
         player1 =createSprite(1100,Math.round(random(50, 250)));
