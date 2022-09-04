@@ -48,8 +48,9 @@ mainCyclist.addAnimation("SahilRunning",mainRacerImg1);
 mainCyclist.scale=0.07;
   
 //set collider for mainCyclist
+  mainCyclist.setCollider("circle", 0, 0, 40);
+  mainCyclist.debug = true;
 
-  
 gameOver = createSprite(650,150);
 gameOver.addImage(gameOverImg);
 gameOver.scale = 0.8;
